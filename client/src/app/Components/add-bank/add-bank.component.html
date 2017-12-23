@@ -1,0 +1,39 @@
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="col-md-6 col-sm-6 col-xs-12">
+      <h2>เพิ่มบัญชีธนาคาร <i class="fa fa-credit-card fa-2x" aria-hidden="true"></i></h2>
+      <div class="form-horizontal" style="padding-top: 20px">
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="email">ชื่อ</label>
+              <div class="col-sm-10">
+                  <input [(ngModel)]="name" type="text" class="form-control" id="email" placeholder="ชื่อ">
+              </div>
+          </div>
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="email">เลขที่บัญชี</label>
+              <div class="col-sm-10">
+                  <input [(ngModel)]="number" type="text" class="form-control" id="email" placeholder="รหัสบัตร">
+              </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">email</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="email" type="text" class="form-control" id="email" placeholder="รหัสบัตร">
+            </div>
+        </div>
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="email">ธนาคาร</label>
+              <div class="col-sm-4">
+                  <select class="form-control col-sm-2" [(ngModel)]="bankType">
+                      <option [ngValue]="'test'">ธนาคาร ทดสอบ</option>
+                      <option [ngValue]="'bbl'">ธนาคาร กรุงเทพ</option>
+                      <option [ngValue]="'kbank'">ธนาคาร กสิกร</option>
+                      <option [ngValue]="'ktb'">ธนาคาร กรุงไทย</option>
+                      <option [ngValue]="'tmb'">ธนาคาร TMB</option>
+                  </select>
+              </div>
+              {{bankType}}
+          </div>
+      </div>
+      <button (click)="addBank()">เพิ่มบัตร</button>
+      <h1> {{added}}</h1>
+  </div>
